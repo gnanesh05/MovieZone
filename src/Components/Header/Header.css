@@ -1,0 +1,28 @@
+.header{
+    width: 100%;
+    cursor: pointer;
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #060d17;
+    color:#c0be2a;
+    height: 4rem;
+    padding: 5px 5px;
+    box-shadow: 0px 5px 5px black;
+    z-index: 100;
+}
+
+.brand{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+@media (max-width:1000px){
+    .header{
+        padding-top: 15px;
+    }
+    .brand{
+        font-size: 1rem;
+    }
+}

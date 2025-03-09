@@ -1,0 +1,10 @@
+*{
+    font-family: "Lato", "Lato-fallback", Arial, sans-serif;
+    margin: 0;
+}
+body{
+    min-height: 100vh; /* Ensures full viewport coverage */
+    height: auto;
+    background-color: #060d17;
+    color: #d9e8ed;
+}
