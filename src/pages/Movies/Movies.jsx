@@ -40,16 +40,16 @@ const Movies = () => {
       Movies
     </Typography>
 
-    <CustomFilter genreList={genreList} setFilters={setFilters}/>
-    
+    <CustomFilter genreList={genreList} setFilters={setFilters} setCurrentPage={setCurrentPage}/>
+
     <Box mt={3} mb={2}
      display="flex"
      flexWrap="wrap"
      justifyContent="space-around"
     >
       {
-        data?.map((item,i)=>(
-          <Card key={i} name={item.title} poster={item.poster_path} media_type={'movie'} vote_average={item.vote_average} release_date={item.release_date}/>
+        data?.map((item)=>(
+          <Card key={item.id} id={item.id}  name={item.title} poster={item.poster_path} media_type={'movie'} vote_average={item.vote_average} release_date={item.release_date}/>
         ))
       }
 

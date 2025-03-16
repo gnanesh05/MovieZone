@@ -16,7 +16,7 @@ function getStyles(name, genre, theme) {
     };
   }
 
-function CustomFilter({genreList, setFilters}) {
+function CustomFilter({genreList, setFilters, setCurrentPage}) {
     const theme = useTheme()
     const [anchorRating, setAnchorRating] = useState(null);
     const [anchorYear, setAnchorYear] = useState(null);
@@ -27,6 +27,7 @@ function CustomFilter({genreList, setFilters}) {
 
     useEffect(()=>{
         setFilters({releaseYear:releaseYear,rating:rating, genre:genre});
+        setCurrentPage(1);
        },[releaseYear, rating, genre]);
 
     const releaseMarks = [

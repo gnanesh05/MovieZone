@@ -1,0 +1,15 @@
+.carouselItem{
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.carouselImg{
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.carouselItemCharacter{
+    font-style: italic;
+}

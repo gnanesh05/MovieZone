@@ -16,13 +16,32 @@ export const fetchTrending = async(page_number)=>{
 export const fetchMovies = async(page_number, filter)=>{
   const {releaseYear, rating, genre} = filter;
   const genreQueryParam = encodeURIComponent(genre.join(','));
-  console.log(filter, genreQueryParam, page_number);
   try {
     const response = await axios(`${api_url}/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&primary_release_year=${releaseYear}&vote_average.gte=${rating}&with_genres=${genreQueryParam}&api_key=${api_key}&page=${page_number}`);
     return response.data;
   } 
   catch (error) {
     console.log(error)
+  }
+}
+
+export const fetchDataById = async(id, mediaType)=>{
+  try {
+    const response = await axios(`${api_url}/${mediaType}/${id}?api_key=${api_key}`)
+    return response.data;
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const fetchCredits = async(id, mediaType)=>{
+  try {
+    const response = await axios(`${api_url}/${mediaType}/${id}/credits?api_key=${api_key}`)
+    return response.data.cast;
+
+  } catch (error) {
+    console.log(error);
   }
 }
 
