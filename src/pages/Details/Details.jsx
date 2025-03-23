@@ -7,8 +7,6 @@ import CastCard from '../../Components/CastCard/CastCard';
 
 function Details({mediaType}) {
     const {id} = useParams();
-    console.log(mediaType)
-
     const [data, setData] = useState({});
     const [genre, setGenre] = useState([]);
     useEffect(()=>{
@@ -53,7 +51,7 @@ function Details({mediaType}) {
             {/* Right side - Image with gradient overlay */}
             <Box
                 sx={{
-                width: "65%", // Image takes 65% width
+                width: "55%", // Image takes 65% width
                 height: "100%",
                 backgroundImage: `linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), 
                     url(${`${img_300}/${data.backdrop_path}`})`,

@@ -35,7 +35,7 @@ const Trending = () => {
       >
         {
           data?.map((item,i)=>(
-            <Card key={i} name={item.title || item.name} poster={item.poster_path} media_type={item.media_type} vote_average={item.vote_average} release_date={item.first_air_date||item.release_date}/>
+            <Card key={i} id={item.id} name={item.title || item.name} poster={item.poster_path} media_type={item.media_type} vote_average={item.vote_average} release_date={item.first_air_date||item.release_date}/>
           ))
         }
 

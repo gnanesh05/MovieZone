@@ -8,7 +8,7 @@ function Card({id,name,poster,media_type,vote_average, release_date}) {
   const navigate = useNavigate();
   const location = useLocation();
   const handleClick = ()=>{
-    navigate(`${location.pathname}/${id}`);
+    navigate(`${location.pathname!=='/' ? location.pathname : media_type==='tv'?'tvshows':'movies'}/${id}`);
   }
   
   return (
